@@ -5,14 +5,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
 
 @Configuration
 @ComponentScan("com.sbm.qa")
-@PropertySources({
-    @PropertySource(value="file:..//config.properties" , ignoreResourceNotFound=true),
-    @PropertySource("classpath:config.properties")
-})
+@PropertySource("file:c://config.properties")
+    //@PropertySource("classpath:config.properties")
 
 public class AppConfig {
 
@@ -23,9 +20,9 @@ public class AppConfig {
 	private String test;
 
 	@Bean
-	public String getFilePath() {
-		System.out.println("File path is " + filePath);
-		System.out.println("TEST PARAMETER : " + this.test);
-		return filePath;
+	public FileManager fileManager() {
+		FileManager fm = new FileManager();
+		fm.setFilePath(filePath);
+		return fm;
 	}	
 }
