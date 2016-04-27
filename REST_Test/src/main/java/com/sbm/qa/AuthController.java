@@ -5,7 +5,7 @@ import org.apache.commons.lang.NotImplementedException;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AuthenticationManager {
+public class AuthController {
 
 	private boolean authRequired;
 	private String basic_UserName;

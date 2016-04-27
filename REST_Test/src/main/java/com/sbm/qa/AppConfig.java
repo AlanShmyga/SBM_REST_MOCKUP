@@ -39,8 +39,8 @@ public class AppConfig {
 	}	
 	
 	@Bean
-	public AuthenticationManager authManager(){
-		AuthenticationManager authManager = new AuthenticationManager();
+	public AuthController authManager(){
+		AuthController authManager = new AuthController();
 		authManager.setAuthRequired(auth_Required);
 		authManager.setUserName(basic_UserName);
 		authManager.setPassword(basic_password);

@@ -17,7 +17,7 @@ public class RESTController {
 	private FileManager fileManager;
 
 	@Autowired 
-	private AuthenticationManager authManager;
+	private AuthController authManager;
 
 	@RequestMapping(value = "/REST")	
 	public ResponseEntity<String> getFile(@RequestParam String file, HttpServletRequest request){ 
